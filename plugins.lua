@@ -52,6 +52,8 @@ local plugins = {
       vim.keymap.set("n", "<leader>l", function()
         lint.try_lint()
       end, { desc = "Trigger linting for current file" })
+      require('lint').linters.pylint.cmd = 'python'
+      require('lint').linters.pylint.args = { '-m', 'pylint', '-f', 'json' }
     end
   },
   {
@@ -65,7 +67,6 @@ local plugins = {
       last_session_on_startup = false,
       projects = { -- define project roots
         "~/DS-SCP*",
-        -- "c:\\Users\\uif77145\\DS-SCP*",
         "~/projects/*"
       },
     },
