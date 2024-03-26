@@ -207,6 +207,32 @@ local plugins = {
       })
     end,
     lazy = false
-  }
+  },
+  {
+    "girishji/pythondoc.vim",
+    config = function()
+    end,
+    lazy = false
+  },
+  {
+    "lervag/wiki.vim",
+    config = function()
+      vim.cmd("let g:wiki_root = '~/wiki'")
+    end,
+    lazy = false
+  },
+  { "nvim-neotest/nvim-nio" },
+  {
+    "edshamis/url-open",
+    event = "VeryLazy",
+    cmd = "URLOpenUnderCursor",
+    config = function()
+      local status_ok, url_open = pcall(require, "url-open")
+      if not status_ok then
+        return
+      end
+      url_open.setup({})
+    end,
+  },
 }
 return plugins

@@ -12,6 +12,7 @@ M.abc = {
     ["<F7>"]       = { "<cmd> lua require(\"dap\").step_into()<CR>", "Step into" },
     ["<F8>"]       = { "<cmd> lua require(\"dap\").step_out()<CR>", "Step out" },
     ["<leader>db"] = { "<cmd> lua require(\"dap\").toggle_breakpoint()<CR>", "Toggle breakpoint" },
+    ["<leader>u"]  = { "<cmd> URLOpenUnderCursor<CR>", "Open URL under cursor" }
   },
 }
 
