@@ -154,7 +154,12 @@ local plugins = {
       dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
       end
+      require("nvim-dap-virtual-text").setup()
     end
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    requires = { "mfussenegger/nvim-dap" },
   }
 }
 return plugins
