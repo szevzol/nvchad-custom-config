@@ -137,7 +137,7 @@ local plugins = {
   },
   {
     "rcarriga/nvim-dap-ui",
-    requires = { "mfussenegger/nvim-dap" },
+    requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     init = function()
       local dap, dapui = require("dap"), require("dapui")
       dapui.setup()
