@@ -57,11 +57,6 @@ local plugins = {
     end
   },
   {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
-  {
     "coffebar/neovim-project",
     opts = {
       last_session_on_startup = false,
