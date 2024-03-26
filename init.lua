@@ -5,6 +5,14 @@ vim.cmd("let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -
 vim.cmd("let &shellquote   = ''")
 vim.cmd("let &shellpipe    = '| Out-File -Encoding UTF8 %s'")
 
+-- Jenkinsfile/groovy settings
+vim.cmd("au BufNewFile,BufRead Jenkinsfile setf groovy")
+vim.cmd("autocmd FileType groovy setlocal shiftwidth=4 softtabstop=4 expandtab")
+
+-- posh-direnv syntax highlight
+vim.cmd("au BufNewFile,BufRead .psenvrc setf ps1")
+
+
 -- Mappings to get rid of "stuck" shift effect
 vim.cmd("command! Q quit")
 vim.cmd("command! Qa quitall")
