@@ -19,6 +19,10 @@ vim.cmd("command! Qa quitall")
 vim.cmd("command! QA quitall")
 vim.cmd("command! W write")
 
+-- Help to use some movement commands in normal mode with Hungarian keyboard
+vim.cmd("map ő [")
+vim.cmd("map ú ]")
+
 -- folding settings
 vim.cmd("set nofoldenable")
 
