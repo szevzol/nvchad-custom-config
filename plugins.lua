@@ -128,6 +128,17 @@ local plugins = {
       }
       require("telescope").load_extension("live_grep_args")
     end,
-  }
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "microsoft/debugpy"
+    },
+    init = function()
+      require("dap-python").setup("python.exe")
+    end
+  },
+  lazy = false
 }
 return plugins
