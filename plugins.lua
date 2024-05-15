@@ -158,6 +158,17 @@ local plugins = {
     requires = { "mfussenegger/nvim-dap" },
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    init = function()
+      -- setup treesitter with config
+    end,
+    dependencies = {
+      -- NOTE: additional parser
+      { "nushell/tree-sitter-nu" },
+    },
+    build = ":TSUpdate"
+  },
+  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     requires = { "nvim-treesitter/nvim-treesitter" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },

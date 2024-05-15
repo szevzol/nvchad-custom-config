@@ -1,9 +1,14 @@
 -- Powershell settings
-vim.cmd("set shell=pwsh.exe")
-vim.cmd("set shellxquote=")
-vim.cmd("let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '")
-vim.cmd("let &shellquote   = ''")
-vim.cmd("let &shellpipe    = '| Out-File -Encoding UTF8 %s'")
+-- vim.cmd("set shell=pwsh.exe")
+-- vim.cmd("set shellxquote=")
+-- vim.cmd("let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '")
+-- vim.cmd("let &shellquote   = ''")
+-- vim.cmd("let &shellpipe    = '| Out-File -Encoding UTF8 %s'")
+vim.opt.sh = "nu"
+vim.opt.shellredir = '| save %s'
+vim.opt.shellcmdflag = "-c"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""
 
 -- Jenkinsfile/groovy settings
 vim.cmd("au BufNewFile,BufRead Jenkinsfile setf groovy")
