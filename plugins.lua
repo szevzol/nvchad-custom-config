@@ -62,7 +62,8 @@ local plugins = {
       last_session_on_startup = false,
       projects = { -- define project roots
         "~/DS-SCP*",
-        "~/projects/*"
+        "~/projects/*",
+        "D:/projects/*"
       },
     },
     init = function()
