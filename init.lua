@@ -46,11 +46,10 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 vim.fn.sign_define('DapBreakpoint', { text = '🟥', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
--- vim.keymap.set('n', '<F5>', require 'nvim-dap'.continue)
--- vim.keymap.set('n', '<F10>', require 'dap'.step_over)
--- vim.keymap.set('n', '<F11>', require 'dap'.step_into)
--- vim.keymap.set('n', '<F12>', require 'dap'.step_out)
--- vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
+vim.keymap.set('n', '<F5>', "<cmd> lua require('dap').continue()<CR>")
+vim.keymap.set('n', '<F10>', "<cmd> lua require('dap').step_over()<CR>")
+vim.keymap.set('n', '<F11>', "<cmd> lua require('dap').step_into()<CR>")
+vim.keymap.set('n', '<F12>', "<cmd> lua require('dap').step_out()<CR>")
 
 local toggle_diagnostics = function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
